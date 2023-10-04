@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="example-jobrunr-spring.core" />
+        <module name="example-jobrunr-spring.processingapp" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="example-jobrunr-spring.webapp" target="17" />
+      <module name="example-jobrunr-spring.webapp.main" target="17" />
+      <module name="example-jobrunr-spring.webapp.test" target="17" />
+      <module name="examples.main" target="1.8" />
+      <module name="examples.test" target="1.8" />
+      <module name="spring-example" target="17" />
+      <module name="spring-example-core" target="17" />
+      <module name="spring-example-processingapp" target="17" />
+      <module name="spring-example-webapp" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="example-jobrunr-spring.core" options="-parameters" />
+      <module name="example-jobrunr-spring.processingapp" options="-parameters" />
+      <module name="spring-example-core" options="-parameters" />
+      <module name="spring-example-processingapp" options="-parameters" />
+      <module name="spring-example-webapp" options="-parameters" />
+    </option>
+  </component>
+</project>

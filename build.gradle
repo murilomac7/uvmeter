@@ -1,0 +1,33 @@
+plugins {
+    id 'java-platform'
+}
+
+javaPlatform {
+    allowDependencies()
+}
+
+dependencies {
+    api platform('org.springframework.boot:spring-boot-dependencies:3.1.1')
+
+    constraints {
+        api 'org.jobrunr:jobrunr-spring-boot-3-starter:6.2.3'
+    }
+}
+
+
+configure(subprojects.findAll {it.name != 'platform'}) {
+
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    group = 'org.jobrunr.examples'
+    version = '1.0'
+
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+}
+
